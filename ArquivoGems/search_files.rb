@@ -34,7 +34,7 @@ end
 
 puts "Busca Palavras em Arquivos"
 puts "Digite uma palavra a ser procurada"
-key = gets.chomp
+key = gets.chomp.capitalize
 
 result = search(key)
 if result.length > 0
