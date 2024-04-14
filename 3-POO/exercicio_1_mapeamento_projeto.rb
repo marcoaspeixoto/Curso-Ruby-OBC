@@ -1,4 +1,4 @@
-class Projeto
+class Project
   def initialize
     @name = "Automação Web"
     @budget = 10000
@@ -6,7 +6,7 @@ class Projeto
   end
 
   def name
-    name
+    @name
   end
 
   def budget
@@ -21,7 +21,26 @@ class Projeto
     @budget = new_budget
   end
 
+  def name=(new_name)
+    @name = new_name
+  end
+
+  def members=(new_member)
+    @members = new_member
+  end
+
   def to_s
     "#{@name}-#{@budget}-#{@members}"
   end
 end
+
+project = Project.new
+
+puts project
+p project.name
+p project.budget
+project.budget = 25000
+p project.budget
+p project.members
+project.members = project.members + ["Beltrano"]
+p project.members
