@@ -44,3 +44,6 @@ p project.budget
 p project.members
 project.members = project.members + ["Beltrano"]
 p project.members
+p project.name
+project.name = "Banco de Dados"
+p project.name
