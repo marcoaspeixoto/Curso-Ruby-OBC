@@ -38,5 +38,10 @@ class Product < ActiveRecord::Base
       puts "Não há estoque suficiente para realizar a operação"
     end
   end
+
+  def increase_stock(amount)
+    self.stock_quantity += amount
+    self.save
+  end
 end
 
